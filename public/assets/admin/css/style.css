@@ -1,0 +1,15 @@
+.saintalk {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.navbar-saintalk {
+    background-color: #287b30;
+}
+
+.text-saintalk {
+    color: #287b30;
+    font: bold;
+    font-weight: bold;
+}
