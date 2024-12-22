@@ -8,7 +8,7 @@
 
     <div class="d-flex flex-column justify-content-center align-items-center gap-2 mt-4">
         <img src="{{ asset('storage/' . Auth::user()->resident->avatar) }}" alt="avatar" class="avatar">
-        <h5>{{ Auth::user()->name }}</h5>
+        <h5 class="myname mt-3">{{ Auth::user()->name }}</h5>
     </div>
 
     <div class="mt-5">

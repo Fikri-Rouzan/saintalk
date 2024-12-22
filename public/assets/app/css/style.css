@@ -702,3 +702,7 @@ textarea.form-control {
     height: 150px;
     object-fit: cover;
 }
+
+.myname {
+    text-align: center;
+}
