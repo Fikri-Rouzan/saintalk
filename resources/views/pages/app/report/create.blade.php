@@ -17,18 +17,15 @@
             <label for="title" class="form-label">Report Title</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"
                 value="{{ old('title') }}">
-
             @error('title')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
             @enderror
-
         </div>
 
         <div class="mb-3">
             <label for="report_category_id" class="form-label">Report Category</label>
-
             <select name="report_category_id" class="form-control @error('report_category_id') is-invalid @enderror">
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}" @if (old('report_category_id') == $category->id) selected @endif>
@@ -36,40 +33,32 @@
                     </option>
                 @endforeach
             </select>
-
             @error('report_category_id')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
             @enderror
-
         </div>
 
         <div class="mb-3">
             <label for="image" class="form-label">Report Evidence</label>
-            <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image"
-                style="display: none;">
-            <img alt="image" id="image-preview" class="img-fluid rounded-2 mb-3 border">
-
+            <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
             @error('image')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
             @enderror
-
         </div>
 
         <div class="mb-3">
             <label for="description" class="form-label">Tell us about your report</label>
             <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description"
                 name="description" value="{{ old('description') }}" rows="5"></textarea>
-
             @error('description')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
             @enderror
-
         </div>
 
         <div class="mb-3">
@@ -81,13 +70,11 @@
             <label for="location" class="form-label">Complete Location</label>
             <textarea type="text" class="form-control @error('location') is-invalid @enderror" id="location" name="location"
                 value="{{ old('location') }}" rows="5"></textarea>
-
             @error('location')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
             @enderror
-
         </div>
 
         <button class="btn btn-primary w-100 mt-2" type="submit" color="primary">
@@ -98,10 +85,10 @@
 
 @section('scripts')
     <script>
-        // Ambil base64 dari localStorage
+        // Retrieve base64 from localStorage
         var imageBase64 = localStorage.getItem('image');
 
-        // Mengubah base64 menjadi binary Blob
+        // Convert base64 to binary Blob
         function base64ToBlob(base64, mime) {
             var byteString = atob(base64.split(',')[1]);
             var ab = new ArrayBuffer(byteString.length);
@@ -114,26 +101,26 @@
             });
         }
 
-        // Fungsi untuk membuat objek file dan set ke input file
+        // Function to create a file object and set it to a file input
         function setFileInputFromBase64(base64) {
             // Mengubah base64 menjadi Blob
-            var blob = base64ToBlob(base64, 'image/jpeg'); // Ganti dengan tipe mime sesuai gambar Anda
+            var blob = base64ToBlob(base64, 'image/jpeg'); // Replace with the MIME type according to your image
             var file = new File([blob], 'image.jpg', {
                 type: 'image/jpeg'
-            }); // Nama file dan tipe MIME
+            }); // File Name and MIME Type
 
-            // Set file ke input file
+            // Set the file to the file input
             var imageInput = document.getElementById('image');
             var dataTransfer = new DataTransfer();
             dataTransfer.items.add(file);
             imageInput.files = dataTransfer.files;
 
-            // Menampilkan preview gambar
+            // Display image preview
             var imagePreview = document.getElementById('image-preview');
             imagePreview.src = URL.createObjectURL(file);
         }
 
-        // Set nilai input file dan preview gambar
+        // Set the file input value and display the image preview
         setFileInputFromBase64(imageBase64);
     </script>
 @endsection

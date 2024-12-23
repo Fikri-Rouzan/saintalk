@@ -30,6 +30,7 @@
                     </p>
                 </div>
             </div>
+
             <div class="row mb-3">
                 <div class="col-4 text-secondary">Date</div>
                 <div class="col-8 d-flex">
@@ -41,6 +42,7 @@
                     </p>
                 </div>
             </div>
+
             <div class="row mb-3">
                 <div class="col-4 text-secondary">Category</div>
                 <div class="col-8 d-flex">
@@ -52,6 +54,7 @@
                     </p>
                 </div>
             </div>
+
             <div class="row mb-3">
                 <div class="col-4 text-secondary">Location</div>
                 <div class="col-8 d-flex">
@@ -63,6 +66,7 @@
                     </p>
                 </div>
             </div>
+
             <div class="row mb-3">
                 <div class="col-4 text-secondary">Status</div>
                 <div class="col-8 d-flex">
@@ -101,7 +105,6 @@
                             <p>Rejected</p>
                         </div>
                     @endif
-
                 </div>
             </div>
         </div>
@@ -116,7 +119,6 @@
                 @foreach ($report->reportStatuses as $status)
                     <li class="timeline-item">
                         <div class="timeline-item-content">
-
                             @if ($status->image)
                                 <img src="{{ asset('storage/' . $status->image) }}" alt="status" class="img-fluid">
                             @endif
@@ -126,11 +128,9 @@
                             <span class="timeline-event">
                                 {{ $status->description }}
                             </span>
-
                         </div>
                     </li>
                 @endforeach
-
             </ul>
         </div>
     </div>

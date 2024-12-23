@@ -3,7 +3,6 @@
 @section('title', 'My Profile')
 
 @section('content')
-
     <h4 class="profile-headline">My Profile</h4>
 
     <div class="d-flex flex-column justify-content-center align-items-center gap-2 mt-4">
@@ -32,6 +31,7 @@
                     </div>
                 </div>
             </a>
+
             <a class="list-group-item d-flex justify-content-between align-items-center mt-2">
                 <div class="d-flex align-items-center">
                     <div style="width: 2em; text-align: center; margin-right: 17px;">
@@ -43,6 +43,7 @@
                     </div>
                 </div>
             </a>
+
             <a class="list-group-item d-flex justify-content-between align-items-center mt-2">
                 <div class="d-flex align-items-center">
                     <div style="width: 2em; text-align: center; margin-right: 17px;">
@@ -54,6 +55,7 @@
                     </div>
                 </div>
             </a>
+
             <a class="list-group-item d-flex justify-content-between align-items-center mt-2">
                 <div class="d-flex align-items-center">
                     <div style="width: 2em; text-align: center; margin-right: 17px;">

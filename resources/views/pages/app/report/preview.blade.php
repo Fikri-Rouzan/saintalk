@@ -7,10 +7,10 @@
         <img alt="image" id="image-preview" class="img-fluid rounded-2">
 
         <div class="d-flex justify-content-center mt-3 gap-3">
-
             <a href="{{ route('report.take') }}" class="btn btn-outline-primary">
                 Retake Photo
             </a>
+
             <a href="{{ route('report.create') }}" class="btn btn-primary">
                 Use Photo
             </a>

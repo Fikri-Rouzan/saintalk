@@ -31,7 +31,6 @@
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email">
-
             @error('email')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -43,7 +42,6 @@
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
                 name="password">
-
             @error('password')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -58,6 +56,5 @@
         <div class="d-flex justify-content-between mt-3">
             <a href="{{ route('register') }}" class="text-decoration-none text-primary">Don't have an account?</a>
         </div>
-
     </form>
 @endsection

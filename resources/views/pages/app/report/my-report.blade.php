@@ -10,18 +10,21 @@
                 Delivered
             </a>
         </li>
+
         <li class="nav-item" role="presentation">
             <a class="nav-link {{ request('status') === 'in_process' ? 'active' : '' }}"
                 href="{{ url()->current() }}?status=in_process" id="diproses-tab" role="tab">
                 In Process
             </a>
         </li>
+
         <li class="nav-item" role="presentation">
             <a class="nav-link {{ request('status') === 'completed' ? 'active' : '' }}"
                 href="{{ url()->current() }}?status=completed" id="selesai-tab" role="tab">
                 Completed
             </a>
         </li>
+
         <li class="nav-item" role="presentation">
             <a class="nav-link {{ request('status') === 'rejected' ? 'active' : '' }}"
                 href="{{ url()->current() }}?status=rejected" id="ditolak-tab" role="tab">
@@ -29,19 +32,17 @@
             </a>
         </li>
     </ul>
-    <div class="tab-content" id="myTabContent">
 
+    <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="terkirim-tab-pane" role="tabpanel" aria-labelledby="terkirim-tab"
             tabindex="0">
             <div class="d-flex flex-column gap-3 mt-3">
-
                 @forelse ($reports as $report)
                     <div class="card card-report border-0 shadow-none">
                         <a href="{{ route('report.show', $report->code) }}" class="text-decoration-none text-dark">
                             <div class="card-body p-0">
                                 <div class="card-report-image position-relative mb-2">
                                     <img src="{{ asset('storage/' . $report->image) }}" alt="">
-
                                     @if ($report->reportStatuses->last()->status === 'delivered')
                                         <div class="badge-status on-process">
                                             Delivered
@@ -65,7 +66,6 @@
                                             Rejected
                                         </div>
                                     @endif
-
                                 </div>
 
                                 <div class="d-flex justify-content-between align-items-end mb-2">
@@ -88,6 +88,7 @@
                             </div>
                         </a>
                     </div>
+
                 @empty
                     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 75vh"
                         id="no-reports">
@@ -98,20 +99,17 @@
                         </a>
                     </div>
                 @endforelse
-
             </div>
         </div>
 
         <div class="tab-pane fade" id="diproses-tab-pane" role="tabpanel" aria-labelledby="diproses-tab" tabindex="0">
             <div class="d-flex flex-column gap-3 mt-3">
-
                 @forelse ($reports as $report)
                     <div class="card card-report border-0 shadow-none">
                         <a href="{{ route('report.show', $report->code) }}" class="text-decoration-none text-dark">
                             <div class="card-body p-0">
                                 <div class="card-report-image position-relative mb-2">
                                     <img src="{{ asset('storage/' . $report->image) }}" alt="">
-
                                     @if ($report->reportStatuses->last()->status === 'delivered')
                                         <div class="badge-status on-process">
                                             Delivered
@@ -135,7 +133,6 @@
                                             Rejected
                                         </div>
                                     @endif
-
                                 </div>
 
                                 <div class="d-flex justify-content-between align-items-end mb-2">
@@ -158,6 +155,7 @@
                             </div>
                         </a>
                     </div>
+
                 @empty
                     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 75vh"
                         id="no-reports">
@@ -168,20 +166,17 @@
                         </a>
                     </div>
                 @endforelse
-
             </div>
         </div>
 
         <div class="tab-pane fade" id="selesai-tab-pane" role="tabpanel" aria-labelledby="selesai-tab" tabindex="0">
             <div class="d-flex flex-column gap-3 mt-3">
-
                 @forelse ($reports as $report)
                     <div class="card card-report border-0 shadow-none">
                         <a href="{{ route('report.show', $report->code) }}" class="text-decoration-none text-dark">
                             <div class="card-body p-0">
                                 <div class="card-report-image position-relative mb-2">
                                     <img src="{{ asset('storage/' . $report->image) }}" alt="">
-
                                     @if ($report->reportStatuses->last()->status === 'delivered')
                                         <div class="badge-status on-process">
                                             Delivered
@@ -205,7 +200,6 @@
                                             Rejected
                                         </div>
                                     @endif
-
                                 </div>
 
                                 <div class="d-flex justify-content-between align-items-end mb-2">
@@ -228,6 +222,7 @@
                             </div>
                         </a>
                     </div>
+
                 @empty
                     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 75vh"
                         id="no-reports">
@@ -238,20 +233,17 @@
                         </a>
                     </div>
                 @endforelse
-
             </div>
         </div>
 
         <div class="tab-pane fade" id="ditolak-tab-pane" role="tabpanel" aria-labelledby="ditolak-tab" tabindex="0">
             <div class="d-flex flex-column gap-3 mt-3">
-
                 @forelse ($reports as $report)
                     <div class="card card-report border-0 shadow-none">
                         <a href="{{ route('report.show', $report->code) }}" class="text-decoration-none text-dark">
                             <div class="card-body p-0">
                                 <div class="card-report-image position-relative mb-2">
                                     <img src="{{ asset('storage/' . $report->image) }}" alt="">
-
                                     @if ($report->reportStatuses->last()->status === 'delivered')
                                         <div class="badge-status on-process">
                                             Delivered
@@ -275,7 +267,6 @@
                                             Rejected
                                         </div>
                                     @endif
-
                                 </div>
 
                                 <div class="d-flex justify-content-between align-items-end mb-2">
@@ -298,6 +289,7 @@
                             </div>
                         </a>
                     </div>
+
                 @empty
                     <div class="d-flex flex-column justify-content-center align-items-center" style="height: 75vh"
                         id="no-reports">
@@ -308,10 +300,8 @@
                         </a>
                     </div>
                 @endforelse
-
             </div>
         </div>
-
     </div>
 @endsection
 

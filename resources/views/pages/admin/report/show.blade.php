@@ -11,6 +11,7 @@
         <div class="card-header py-3">
             <h6 class="text-saintalk m-0 font-weight-bold">Report Data Details</h6>
         </div>
+
         <div class="card-body">
             <table class="table table-bordered">
                 <tr>
@@ -51,7 +52,6 @@
                     <td>Map View</td>
                     <td>
                         <div id="map" style="height: 300px">
-
                         </div>
                     </td>
                 </tr>
@@ -68,6 +68,7 @@
         <div class="card-header py-3">
             <h6 class="text-saintalk m-0 font-weight-bold">List of Report Progress Data</h6>
         </div>
+
         <div class="card-body">
             <a href="{{ route('admin.report-status.create', $report->id) }}" class="btn btn-success mb-3">Add Report
                 Progress Data</a>
@@ -82,6 +83,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         @foreach ($report->reportStatuses as $status)
                             <tr>
@@ -117,7 +119,6 @@
             </div>
         </div>
     </div>
-
 @endsection
 
 @section('scripts')

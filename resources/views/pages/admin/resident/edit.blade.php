@@ -11,6 +11,7 @@
         <div class="card-header py-3">
             <h6 class="text-saintalk m-0 font-weight-bold">Edit FST UIN JKT Resident Data</h6>
         </div>
+
         <div class="card-body">
             <form action="{{ route('admin.resident.update', $resident->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -19,7 +20,6 @@
                     <label for="name">Full Name</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
                         name="name" value="{{ old('name', $resident->user->name) }}">
-
                     @error('name')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -31,7 +31,6 @@
                     <label for="id_number">Identity Number</label>
                     <input type="number" class="form-control @error('id_number') is-invalid @enderror" id="id_number"
                         name="id_number" value="{{ old('id_number', $resident->user->resident->id_number) }}">
-
                     @error('id_number')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -43,7 +42,6 @@
                     <label for="major">Study Program</label>
                     <input type="text" class="form-control @error('major') is-invalid @enderror" id="major"
                         name="major" value="{{ old('major', $resident->user->resident->major) }}">
-
                     @error('major')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -55,7 +53,6 @@
                     <label for="email">Email</label>
                     <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
                         name="email" value="{{ old('email', $resident->user->email) }}" readonly>
-
                     @error('email')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -67,7 +64,6 @@
                     <label for="password">Password</label>
                     <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
                         name="password">
-
                     @error('password')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -79,13 +75,13 @@
                     <label for="avatar">Profile Picture</label>
                     <input type="file" class="form-control @error('avatar') is-invalid @enderror" id="avatar"
                         name="avatar">
-
                     @error('avatar')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                     @enderror
                 </div>
+
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
         </div>

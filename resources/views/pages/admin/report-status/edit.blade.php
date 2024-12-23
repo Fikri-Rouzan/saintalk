@@ -11,6 +11,7 @@
         <div class="card-header py-3">
             <h6 class="text-saintalk m-0 font-weight-bold">Edit Report Progress Data {{ $status->report->code }}</h6>
         </div>
+
         <div class="card-body">
             <form action="{{ route('admin.report-status.update', $status->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -19,7 +20,6 @@
 
                 <div class="form-group">
                     <label for="image">Report Progress Evidence</label>
-
                     @if ($status->image)
                         <img src="{{ asset('storage/' . $status->image) }}" alt="image" width="200">
                         <br>
@@ -37,7 +37,6 @@
 
                 <div class="form-group">
                     <label for="status">Report Progress Status</label>
-
                     <select name="status" class="form-control @error('status') is-invalid @enderror">
                         <option value="delivered" @if (old('status', $status->status) == 'delivered') selected @endif>
                             Delivered
@@ -55,7 +54,6 @@
                             Rejected
                         </option>
                     </select>
-
                     @error('status')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -67,13 +65,13 @@
                     <label for="description">Report Progress Description</label>
                     <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description"
                         name="description" value="{{ old('description', $status->description) }}" rows="5">{{ old('description', $status->description) }}</textarea>
-
                     @error('description')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                     @enderror
                 </div>
+
                 <button type="submit" class="btn btn-success">Submit</button>
             </form>
         </div>

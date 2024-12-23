@@ -11,6 +11,7 @@
         <div class="card-header py-3">
             <h6 class="text-saintalk m-0 font-weight-bold">FST UIN JKT Resident Data Details</h6>
         </div>
+
         <div class="card-body">
             <table class="table table-bordered">
                 <tr>

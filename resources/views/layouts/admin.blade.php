@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,17 +18,12 @@
 
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="{{ asset('assets/admin/css/style.css') }}">
-
     <link href="{{ asset('assets/admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
-
     <link href="{{ asset('assets/admin/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-
 </head>
 
 <body id="page-top">
-
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -89,12 +83,9 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('assets/admin/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('assets/admin/js/demo/chart-pie-demo.js') }}"></script>
-
     <script src="{{ asset('assets/admin/vendor/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets/admin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
-
     <script src="{{ asset('assets/admin/js/demo/datatables-demo.js') }}"></script>
-
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     @yield('scripts')

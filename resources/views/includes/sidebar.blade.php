@@ -1,5 +1,4 @@
 <ul class="navbar-saintalk navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
-
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center mt-3" href="{{ route('admin.dashboard') }}">
         <div class="sidebar-brand-icon">
@@ -36,5 +35,4 @@
             <i class="fas fa-fw fa-folder-open"></i>
             <span>Reports Data</span></a>
     </li>
-
 </ul>

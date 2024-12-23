@@ -9,7 +9,6 @@
         <h6 class="fw-bold text-center mb-2">Your report has been successfully created</h6>
         <p class="text-center mb-4">You can view the report you created on the reports page</p>
 
-
         <a href="{{ route('report.myreport', ['status' => 'delivered']) }}" class="btn btn-primary py-2 px-4">
             View Report
         </a>

@@ -13,14 +13,12 @@
         @endif
 
         <div class="d-flex flex-column gap-3 mt-3">
-
             @foreach ($reports as $report)
                 <div class="card card-report border-0 shadow-none">
                     <a href="{{ route('report.show', $report->code) }}" class="text-decoration-none text-dark">
                         <div class="card-body p-0">
                             <div class="card-report-image position-relative mb-2">
                                 <img src="{{ asset('storage/' . $report->image) }}" alt="">
-
                                 @if ($report->reportStatuses->last()->status === 'delivered')
                                     <div class="badge-status on-process">
                                         Delivered
@@ -67,7 +65,6 @@
                     </a>
                 </div>
             @endforeach
-
         </div>
     </div>
 @endsection
