@@ -18,7 +18,7 @@
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                        name="name" value="{{ old('name') }}">
+                        name="name" value="{{ old('name') }}" placeholder="Type the resident's full name">
                     @error('name')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -29,7 +29,7 @@
                 <div class="form-group">
                     <label for="id_number">Identity Number</label>
                     <input type="number" class="form-control @error('id_number') is-invalid @enderror" id="id_number"
-                        name="id_number" value="{{ old('id_number') }}">
+                        name="id_number" value="{{ old('id_number') }}" placeholder="Type the resident's identity number">
                     @error('id_number')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -40,7 +40,7 @@
                 <div class="form-group">
                     <label for="major">Study Program</label>
                     <input type="text" class="form-control @error('major') is-invalid @enderror" id="major"
-                        name="major" value="{{ old('major') }}">
+                        name="major" value="{{ old('major') }}" placeholder="Type the resident's study program">
                     @error('major')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -51,7 +51,7 @@
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
-                        name="email" value="{{ old('email') }}">
+                        name="email" value="{{ old('email') }}" placeholder="Type the resident's email">
                     @error('email')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -62,7 +62,7 @@
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
-                        name="password">
+                        name="password" placeholder="Type the resident's password">
                     @error('password')
                         <div class="invalid-feedback">
                             {{ $message }}

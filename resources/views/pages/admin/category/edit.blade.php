@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                        name="name" value="{{ old('name', $category->name) }}">
+                        name="name" value="{{ old('name', $category->name) }}" placeholder="Type the new category name">
                     @error('name')
                         <div class="invalid-feedback">
                             {{ $message }}

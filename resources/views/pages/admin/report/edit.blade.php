@@ -63,7 +63,7 @@
                 <div class="form-group">
                     <label for="title">Report Title</label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                        name="title" value="{{ old('title', $report->title) }}">
+                        name="title" value="{{ old('title', $report->title) }}" placeholder="Type the new report title">
                     @error('title')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -74,7 +74,8 @@
                 <div class="form-group">
                     <label for="description">Report Description</label>
                     <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description"
-                        name="description" value="{{ old('description', $report->description) }}" rows="5">{{ old('description', $report->description) }}</textarea>
+                        name="description" value="{{ old('description', $report->description) }}"
+                        placeholder="Type the new report description" rows="5">{{ old('description', $report->description) }}</textarea>
                     @error('description')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -120,7 +121,7 @@
                 <div class="form-group">
                     <label for="location">Report Location</label>
                     <textarea type="text" class="form-control @error('location') is-invalid @enderror" id="location" name="location"
-                        value="{{ old('location', $report->location) }}" rows="5">{{ old('location', $report->location) }}</textarea>
+                        value="{{ old('location', $report->location) }}" placeholder="Type the new report location" rows="5">{{ old('location', $report->location) }}</textarea>
                     @error('location')
                         <div class="invalid-feedback">
                             {{ $message }}

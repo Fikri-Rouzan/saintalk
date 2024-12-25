@@ -62,7 +62,7 @@
                 <div class="form-group">
                     <label for="title">Report Title</label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                        name="title" value="{{ old('title') }}">
+                        name="title" value="{{ old('title') }}" placeholder="Type the report title">
                     @error('title')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -73,7 +73,7 @@
                 <div class="form-group">
                     <label for="description">Report Description</label>
                     <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description"
-                        name="description" value="{{ old('description') }}" rows="5"></textarea>
+                        name="description" value="{{ old('description') }}" placeholder="Type the report description" rows="5"></textarea>
                     @error('description')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -117,7 +117,7 @@
                 <div class="form-group">
                     <label for="location">Report Location</label>
                     <textarea type="text" class="form-control @error('location') is-invalid @enderror" id="location" name="location"
-                        value="{{ old('location') }}" rows="5"></textarea>
+                        value="{{ old('location') }}" placeholder="Type the report location" rows="5"></textarea>
                     @error('location')
                         <div class="invalid-feedback">
                             {{ $message }}

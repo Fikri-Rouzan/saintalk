@@ -19,7 +19,8 @@
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                        name="name" value="{{ old('name', $resident->user->name) }}">
+                        name="name" value="{{ old('name', $resident->user->name) }}"
+                        placeholder="Type the resident's new full name">
                     @error('name')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -30,7 +31,8 @@
                 <div class="form-group">
                     <label for="id_number">Identity Number</label>
                     <input type="number" class="form-control @error('id_number') is-invalid @enderror" id="id_number"
-                        name="id_number" value="{{ old('id_number', $resident->user->resident->id_number) }}">
+                        name="id_number" value="{{ old('id_number', $resident->user->resident->id_number) }}"
+                        placeholder="Type the resident's new identity number">
                     @error('id_number')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -41,7 +43,8 @@
                 <div class="form-group">
                     <label for="major">Study Program</label>
                     <input type="text" class="form-control @error('major') is-invalid @enderror" id="major"
-                        name="major" value="{{ old('major', $resident->user->resident->major) }}">
+                        name="major" value="{{ old('major', $resident->user->resident->major) }}"
+                        placeholder="Type the resident's new study program">
                     @error('major')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -63,7 +66,7 @@
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
-                        name="password">
+                        name="password" placeholder="Type the resident's new password">
                     @error('password')
                         <div class="invalid-feedback">
                             {{ $message }}

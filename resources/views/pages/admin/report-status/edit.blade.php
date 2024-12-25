@@ -64,7 +64,8 @@
                 <div class="form-group">
                     <label for="description">Report Progress Description</label>
                     <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description"
-                        name="description" value="{{ old('description', $status->description) }}" rows="5">{{ old('description', $status->description) }}</textarea>
+                        name="description" value="{{ old('description', $status->description) }}"
+                        placeholder="Type the new report progress description" rows="5">{{ old('description', $status->description) }}</textarea>
                     @error('description')
                         <div class="invalid-feedback">
                             {{ $message }}
