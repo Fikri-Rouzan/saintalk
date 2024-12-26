@@ -44,6 +44,18 @@
             </div>
 
             <div class="row mb-3">
+                <div class="col-4 text-secondary">User</div>
+                <div class="col-8 d-flex">
+                    <span class="me-2">
+                        :
+                    </span>
+                    <p>
+                        {{ $report->resident->user->name }}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-3">
                 <div class="col-4 text-secondary">Category</div>
                 <div class="col-8 d-flex">
                     <span class="me-2">
@@ -51,6 +63,18 @@
                     </span>
                     <p>
                         {{ $report->reportCategory->name }}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-4 text-secondary">Description</div>
+                <div class="col-8 d-flex">
+                    <span class="me-2">
+                        :
+                    </span>
+                    <p>
+                        {{ $report->description }}
                     </p>
                 </div>
             </div>
