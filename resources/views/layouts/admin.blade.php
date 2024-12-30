@@ -10,6 +10,8 @@
 
     <title>@yield('title')</title>
 
+    <link rel="icon" href="{{ asset('assets/app/images/icons/Icon.ico') }}">
+
     <!-- Custom fonts for this template-->
     <link href="{{ asset('assets/admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
