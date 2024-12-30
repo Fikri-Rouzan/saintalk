@@ -7,7 +7,7 @@ SainTalk is a website for academic service complaints that can be used within th
 ## Features
 
 -   Registration and Log In: Users can create a new account using the registration form or log in to their existing account to submit complaint reports.
--   Creating a Report: Users can create complaint reports regarding inadequate facilities and infrastructure and provide detailed information about the report.
+-   Creating Reports: Users can create complaint reports regarding inadequate facilities and infrastructure and provide detailed information about the report.
 -   Viewing Progress Reports: Users can view the progress status of their submitted reports and check whether their reports have been accepted or rejected.
 -   Viewing All Reports: Users can view all reports submitted by themselves or others, along with detailed information about the reports and their progress.
 
