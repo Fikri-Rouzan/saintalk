@@ -13,9 +13,11 @@ SainTalk is a website for academic service complaints that can be used within th
 
 ## Technologies Used
 
--   Programming Languages: HTML, PHP, JavaScript, CSS, and SCSS.
+-   Programming Languages: PHP and JavaScript.
+-   Stylesheet Languages: CSS and SCSS.
+-   Templating Engine: Blade.
 -   Frameworks: Laravel and Bootstrap.
 -   Libraries: Spatie, SweetAlert2, and Leaflet.
 -   Database: MySQL.
 -   Map Service: OpenStreetMap.
--   Software: Visual Studio Code, Laragon, TablePlus, and GitHub.
+-   Software: Visual Studio Code, Laragon, and GitHub.
