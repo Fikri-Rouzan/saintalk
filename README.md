@@ -20,4 +20,4 @@ SainTalk is a website for academic service complaints that can be used within th
 -   Libraries: Spatie, SweetAlert2, and Leaflet.
 -   Database: MySQL.
 -   Map Service: OpenStreetMap.
--   Software: Visual Studio Code, Laragon, and GitHub.
+-   Software: Visual Studio Code and Laragon.
