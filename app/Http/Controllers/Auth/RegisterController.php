@@ -29,6 +29,6 @@ class RegisterController extends Controller
 
         $this->residentRepository->createResident($data);
 
-        return redirect()->route('login')->with('success', 'Registration Successful. Please Log in');
+        return redirect()->route('login')->with('success', 'Registration Successful. Please Login');
     }
 }

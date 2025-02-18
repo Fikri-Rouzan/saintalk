@@ -47,16 +47,6 @@ class ReportController extends Controller
         return view('pages.app.report.show', compact('report'));
     }
 
-    public function take()
-    {
-        return view('pages.app.report.take');
-    }
-
-    public function preview()
-    {
-        return view('pages.app.report.preview');
-    }
-
     public function create()
     {
         $categories = $this->reportCategoryRepository->getAllReportCategories();

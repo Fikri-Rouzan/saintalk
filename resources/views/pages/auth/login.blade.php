@@ -1,6 +1,6 @@
 @extends('layouts.no-nav')
 
-@section('title', 'Log in')
+@section('title', 'Login')
 
 @section('content')
     <h5 class="fw-bold text-center mt-5">Welcome to SainTalk 👋</h5>
@@ -11,7 +11,7 @@
 
     <div class="d-flex align-items-center mt-4">
         <hr class="flex-grow-1">
-        <span class="mx-2">Please log in to continue</span>
+        <span class="mx-2">Please login to continue</span>
         <hr class="flex-grow-1">
     </div>
 
@@ -51,7 +51,7 @@
         </div>
 
         <button class="btn btn-primary w-100 mt-2" type="submit" color="primary" id="btn-login">
-            Log in
+            Login
         </button>
 
         <div class="d-flex justify-content-between mt-3">

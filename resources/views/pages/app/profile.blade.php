@@ -75,7 +75,7 @@
             </form>
             <button class="btn btn-outline-danger w-100 rounded-pill"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                Log Out
+                Logout
             </button>
         </div>
     </div>
