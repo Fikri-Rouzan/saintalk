@@ -6,9 +6,8 @@
     <h5 class="fw-bold text-center mt-5">Welcome to SainTalk 👋</h5>
 
     <div class="center-saintalk mt-4">
-        <img class="saintalk" src="{{ asset('assets/app/images/icons/SainTalk.png') }}" alt="">
+        <img class="saintalk" src="{{ asset('assets/app/images/icons/logo.png') }}" alt="">
     </div>
-
     <div class="d-flex align-items-center mt-4">
         <hr class="flex-grow-1">
         <span class="mx-2">Please login to continue</span>
@@ -31,20 +30,24 @@
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email"
-                placeholder="Type your email">
+                placeholder="Type your email" autocomplete="email">
             @error('email')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
             @enderror
         </div>
-
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
-                name="password" placeholder="Type your password">
+            <div class="password-wrapper">
+                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
+                    name="password" placeholder="Type your password">
+                <span id="toggle-password-icon">
+                    <i class="fas fa-eye fa-fw"></i>
+                </span>
+            </div>
             @error('password')
-                <div class="invalid-feedback">
+                <div class="invalid-feedback d-block">
                     {{ $message }}
                 </div>
             @enderror
@@ -58,4 +61,21 @@
             <a href="{{ route('register') }}" class="text-decoration-none text-primary">Don't have an account?</a>
         </div>
     </form>
+@endsection
+
+@section('scripts')
+    <script>
+        const passwordInput = document.getElementById('password');
+        const toggleIconContainer = document.getElementById('toggle-password-icon');
+        const icon = toggleIconContainer.querySelector('i');
+
+        toggleIconContainer.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+
+            passwordInput.setAttribute('type', type);
+
+            icon.classList.toggle('fa-eye');
+            icon.classList.toggle('fa-eye-slash');
+        });
+    </script>
 @endsection

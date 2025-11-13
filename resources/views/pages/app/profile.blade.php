@@ -9,7 +9,6 @@
         <img src="{{ asset('storage/' . Auth::user()->resident->avatar) }}" alt="avatar" class="avatar">
         <h5 class="myname mt-3">{{ Auth::user()->name }}</h5>
     </div>
-
     <div class="mt-5">
         <div class="list-group list-group-flush">
             <div class="list-group-item d-flex justify-content-between align-items-center">
@@ -18,7 +17,6 @@
                 </div>
             </div>
         </div>
-
         <div class="list-group list-group-flush">
             <a class="list-group-item d-flex justify-content-between align-items-center mt-2">
                 <div class="d-flex align-items-center">
@@ -31,7 +29,6 @@
                     </div>
                 </div>
             </a>
-
             <a class="list-group-item d-flex justify-content-between align-items-center mt-2">
                 <div class="d-flex align-items-center">
                     <div style="width: 2em; text-align: center; margin-right: 17px;">
@@ -43,7 +40,6 @@
                     </div>
                 </div>
             </a>
-
             <a class="list-group-item d-flex justify-content-between align-items-center mt-2">
                 <div class="d-flex align-items-center">
                     <div style="width: 2em; text-align: center; margin-right: 17px;">
@@ -55,7 +51,6 @@
                     </div>
                 </div>
             </a>
-
             <a class="list-group-item d-flex justify-content-between align-items-center mt-2">
                 <div class="d-flex align-items-center">
                     <div style="width: 2em; text-align: center; margin-right: 17px;">
@@ -73,7 +68,7 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
-            <button class="btn btn-outline-danger w-100 rounded-pill"
+            <button id="logout-button" class="btn btn-outline-danger w-100 rounded-pill"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 Logout
             </button>

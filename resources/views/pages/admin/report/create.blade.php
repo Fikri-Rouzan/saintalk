@@ -4,14 +4,13 @@
 
 @section('content')
     <!-- Page Heading -->
-    <a href="{{ route('admin.report.index') }}" class="btn btn-danger mb-3">Back</a>
+    <a href="{{ route('admin.report.index') }}" class="btn btn-secondary mb-3">Back</a>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="text-saintalk m-0 font-weight-bold">Add Report Data</h6>
         </div>
-
         <div class="card-body">
             <form action="{{ route('admin.report.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -25,10 +24,10 @@
                         </div>
                     @enderror
                 </div>
-
                 <div class="form-group">
-                    <label for="resident">User</label>
-                    <select name="resident_id" class="form-control @error('resident_id') is-invalid @enderror">
+                    <label for="resident_id">User</label>
+                    <select name="resident_id" id="resident_id"
+                        class="form-control @error('resident_id') is-invalid @enderror">
                         @foreach ($residents as $resident)
                             <option value="{{ $resident->id }}" @if (old('resident_id') == $resident->id) selected @endif>
                                 {{ $resident->user->email }} - {{ $resident->user->name }}
@@ -41,10 +40,9 @@
                         </div>
                     @enderror
                 </div>
-
                 <div class="form-group">
-                    <label for="category">Report Category</label>
-                    <select name="report_category_id"
+                    <label for="report_category_id">Report Category</label>
+                    <select name="report_category_id" id="report_category_id"
                         class="form-control @error('report_category_id') is-invalid @enderror">
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}" @if (old('report_category_id') == $category->id) selected @endif>
@@ -58,7 +56,6 @@
                         </div>
                     @enderror
                 </div>
-
                 <div class="form-group">
                     <label for="title">Report Title</label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
@@ -69,7 +66,6 @@
                         </div>
                     @enderror
                 </div>
-
                 <div class="form-group">
                     <label for="description">Report Description</label>
                     <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description"
@@ -80,7 +76,6 @@
                         </div>
                     @enderror
                 </div>
-
                 <div class="form-group">
                     <label for="image">Report Evidence</label>
                     <input type="file" class="form-control @error('image') is-invalid @enderror" id="image"
@@ -91,7 +86,6 @@
                         </div>
                     @enderror
                 </div>
-
                 <div class="form-group">
                     <label for="latitude">Latitude</label>
                     <input type="text" class="form-control @error('latitude') is-invalid @enderror" id="latitude"
@@ -102,7 +96,6 @@
                         </div>
                     @enderror
                 </div>
-
                 <div class="form-group">
                     <label for="longitude">Longitude</label>
                     <input type="text" class="form-control @error('longitude') is-invalid @enderror" id="longitude"
@@ -113,7 +106,6 @@
                         </div>
                     @enderror
                 </div>
-
                 <div class="form-group">
                     <label for="location">Report Location</label>
                     <textarea type="text" class="form-control @error('location') is-invalid @enderror" id="location" name="location"

@@ -31,7 +31,6 @@
                 View All
             </a>
         </div>
-
         <div class="d-flex flex-column gap-3 mt-3">
             @foreach ($reports as $report)
                 <div class="card card-report border-0 shadow-none">
@@ -63,10 +62,9 @@
                                     </div>
                                 @endif
                             </div>
-
                             <div class="d-flex justify-content-between align-items-end mb-2">
                                 <div class="d-flex align-items-center ">
-                                    <img src="{{ asset('assets/app/images/icons/MapPin.png') }}" alt="map pin"
+                                    <img src="{{ asset('assets/app/images/icons/pin.png') }}" alt="map pin"
                                         class="icon me-2">
                                     <p class="text-primary city">
                                         {{ \Str::substr($report->location, 0, 20) }}...

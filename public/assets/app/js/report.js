@@ -11,7 +11,6 @@ navigator.geolocation.getCurrentPosition(function (position) {
     longitude.value = lng;
 
     var mymap = L.map("map").setView([lat, lng], 13);
-
     var marker = L.marker([lat, lng]).addTo(mymap);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {

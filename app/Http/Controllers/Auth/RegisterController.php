@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreResidentRequest;
 use App\Interfaces\ResidentRepositoryInterface;
-use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -24,7 +23,6 @@ class RegisterController extends Controller
     public function store(StoreResidentRequest $request)
     {
         $data = $request->validated();
-
         $data['avatar'] = $request->file('avatar')->store('assets/avatar', 'public');
 
         $this->residentRepository->createResident($data);

@@ -41,7 +41,6 @@ class ResidentController extends Controller
     public function store(StoreResidentRequest $request)
     {
         $data = $request->validated();
-
         $data['avatar'] = $request->file('avatar')->store('assets/avatar', 'public');
 
         $this->residentRepository->createResident($data);

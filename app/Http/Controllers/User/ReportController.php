@@ -57,7 +57,6 @@ class ReportController extends Controller
     public function store(StoreReportRequest $request)
     {
         $data = $request->validated();
-
         $data['code'] = 'SAINTALK' . mt_rand(100000, 999999);
         $data['resident_id'] = Auth::user()->resident->id;
         $data['image'] = $request->file('image')->store('assets/report/image', 'public');

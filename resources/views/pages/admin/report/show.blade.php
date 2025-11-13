@@ -4,14 +4,13 @@
 
 @section('content')
     <!-- Page Heading -->
-    <a href="{{ route('admin.report.index') }}" class="btn btn-danger mb-3">Back</a>
+    <a href="{{ route('admin.report.index') }}" class="btn btn-secondary mb-3">Back</a>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="text-saintalk m-0 font-weight-bold">Report Data Details</h6>
         </div>
-
         <div class="card-body">
             <table class="table table-bordered">
                 <tr>
@@ -68,7 +67,6 @@
         <div class="card-header py-3">
             <h6 class="text-saintalk m-0 font-weight-bold">List of Report Progress Data</h6>
         </div>
-
         <div class="card-body">
             <a href="{{ route('admin.report-status.create', $report->id) }}" class="btn btn-success mb-3">Add Report
                 Progress Data</a>
@@ -83,7 +81,6 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         @foreach ($report->reportStatuses as $status)
                             <tr>
@@ -101,15 +98,15 @@
                                 <td>
                                     {{ $status->description }}
                                 </td>
-                                <td>
+                                <td class="text-nowrap">
                                     <a href="{{ route('admin.report-status.edit', $status->id) }}"
-                                        class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
-
+                                        class="btn btn-warning btn-sm mr-1"><i class="fas fa-pencil-alt fa-fw"></i></a>
                                     <form action="{{ route('admin.report-status.destroy', $status->id) }}" method="POST"
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger"><i class="fas fa-times"></i></button>
+                                        <button type="submit" class="btn btn-danger btn-sm"><i
+                                                class="fas fa-times fa-fw"></i></button>
                                     </form>
                                 </td>
                             </tr>
@@ -124,7 +121,6 @@
 @section('scripts')
     <script>
         var mymap = L.map('map').setView([{{ $report->latitude }}, {{ $report->longitude }}], 13);
-
         var marker = L.marker([{{ $report->latitude }}, {{ $report->longitude }}]).addTo(mymap);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -132,6 +128,15 @@
             maxZoom: 18,
         }).addTo(mymap);
 
-        marker.bindPopup("<b>Lokasi Laporan</b><br />berada di {{ $report->location }}").openPopup();
+        marker.bindPopup("<b>Report Location</b><br />located at {{ $report->location }}").openPopup();
+
+        $(document).ready(function() {
+            const searchInput = $("#dataTable_filter input");
+
+            searchInput.attr("id", "dataTableSearch");
+            searchInput.attr("name", "dataTableSearch");
+            searchInput.attr("aria-label", "Search Data Table");
+            searchInput.attr("placeholder", "Search data...");
+        });
     </script>
 @endsection

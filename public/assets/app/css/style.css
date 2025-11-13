@@ -706,3 +706,43 @@ textarea.form-control {
 .myname {
     text-align: center;
 }
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 3rem !important;
+}
+
+.password-wrapper .form-control.is-invalid {
+    background-image: none !important;
+}
+
+#toggle-password-icon {
+    position: absolute;
+    right: 15px;
+    top: 52%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+}
+
+#logout-button:hover {
+    color: #fff !important;
+    background-color: #bb2d3b !important;
+    border-color: #b02a37 !important;
+}
+
+#logout-button:focus {
+    color: #fff !important;
+    background-color: #bb2d3b !important;
+    border-color: #b02a37 !important;
+    box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5) !important;
+}
+
+#lottie-report:hover,
+#lottie-report:active,
+#lottie-report:focus {
+    color: #fff !important;
+}

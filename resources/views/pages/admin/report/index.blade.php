@@ -36,18 +36,17 @@
                                 <td>
                                     <img src="{{ asset('storage/' . $report->image) }}" alt="image" width="100">
                                 </td>
-                                <td>
-                                    <a href="{{ route('admin.report.edit', $report->id) }}" class="btn btn-warning"><i
-                                            class="fas fa-pencil-alt"></i></a>
-
-                                    <a href="{{ route('admin.report.show', $report->id) }}" class="btn btn-info"><i
-                                            class="fas fa-eye"></i></a>
-
+                                <td class="text-nowrap">
+                                    <a href="{{ route('admin.report.edit', $report->id) }}"
+                                        class="btn btn-warning btn-sm mr-1"><i class="fas fa-pencil-alt fa-fw"></i></a>
+                                    <a href="{{ route('admin.report.show', $report->id) }}"
+                                        class="btn btn-info btn-sm mr-1"><i class="fas fa-eye fa-fw"></i></a>
                                     <form action="{{ route('admin.report.destroy', $report->id) }}" method="POST"
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger"><i class="fas fa-times"></i></button>
+                                        <button type="submit" class="btn btn-danger btn-sm"><i
+                                                class="fas fa-times fa-fw"></i></button>
                                     </form>
                                 </td>
                             </tr>
@@ -57,5 +56,17 @@
             </div>
         </div>
     </div>
+@endsection
 
+@section('scripts')
+    <script>
+        $(document).ready(function() {
+            const searchInput = $("#dataTable_filter input");
+
+            searchInput.attr("id", "dataTableSearch");
+            searchInput.attr("name", "dataTableSearch");
+            searchInput.attr("aria-label", "Search Data Table");
+            searchInput.attr("placeholder", "Search data...");
+        });
+    </script>
 @endsection

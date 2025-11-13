@@ -4,7 +4,6 @@
 
 @section('content')
     <h3 class="mb-3">Report your issue here immediately!</h3>
-
     <p class="text-description">Please fill out the form below accurately so that we can validate and handle your report as
         soon as possible</p>
 
@@ -23,10 +22,10 @@
                 </div>
             @enderror
         </div>
-
         <div class="mb-3">
             <label for="report_category_id" class="form-label">Report Category</label>
-            <select name="report_category_id" class="form-control @error('report_category_id') is-invalid @enderror">
+            <select name="report_category_id" id="report_category_id"
+                class="form-control @error('report_category_id') is-invalid @enderror">
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}" @if (old('report_category_id') == $category->id) selected @endif>
                         {{ $category->name }}
@@ -39,7 +38,6 @@
                 </div>
             @enderror
         </div>
-
         <div class="mb-3">
             <label for="image" class="form-label">Report Evidence</label>
             <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
@@ -49,7 +47,6 @@
                 </div>
             @enderror
         </div>
-
         <div class="mb-3">
             <label for="description" class="form-label">Tell us about your report</label>
             <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description"
@@ -60,12 +57,10 @@
                 </div>
             @enderror
         </div>
-
         <div class="mb-3">
-            <label for="map" class="form-label">Report Location</label>
+            <span class="form-label">Report Location</span>
             <div id="map"></div>
         </div>
-
         <div class="mb-3">
             <label for="location" class="form-label">Complete Location</label>
             <textarea type="text" class="form-control @error('location') is-invalid @enderror" id="location" name="location"

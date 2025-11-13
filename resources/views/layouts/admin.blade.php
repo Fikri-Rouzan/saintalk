@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>@yield('title')</title>
 
     <link rel="icon" href="{{ asset('assets/app/images/icons/Icon.ico') }}">
@@ -19,29 +18,24 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link rel="stylesheet" href="{{ asset('assets/admin/css/style.css') }}">
     <link href="{{ asset('assets/admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/admin/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="{{ asset('assets/admin/css/style.css') }}">
 </head>
 
 <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
-
         <!-- Sidebar -->
         @include('includes.sidebar')
-        <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- Main Content -->
             <div id="content">
-
                 <!-- Topbar -->
                 @include('includes.topbar')
-                <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -49,20 +43,12 @@
 
                     @yield('content')
                 </div>
-                <!-- /.container-fluid -->
-
             </div>
-            <!-- End of Main Content -->
 
             <!-- Footer -->
             @include('includes.footer')
-            <!-- End of Footer -->
-
         </div>
-        <!-- End of Content Wrapper -->
-
     </div>
-    <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -79,16 +65,22 @@
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('assets/admin/js/sb-admin-2.min.js') }}"></script>
 
-    <!-- Page level plugins -->
-    <script src="{{ asset('assets/admin/vendor/chart.js/Chart.min.js') }}"></script>
-
     <!-- Page level custom scripts -->
-    <script src="{{ asset('assets/admin/js/demo/chart-area-demo.js') }}"></script>
-    <script src="{{ asset('assets/admin/js/demo/chart-pie-demo.js') }}"></script>
     <script src="{{ asset('assets/admin/vendor/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets/admin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('assets/admin/js/demo/datatables-demo.js') }}"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#close-sidebar-button").on("click", function(e) {
+                e.preventDefault();
+
+                $("body").toggleClass("sidebar-toggled");
+                $("#accordionSidebar").toggleClass("toggled");
+            });
+        });
+    </script>
 
     @yield('scripts')
 </body>

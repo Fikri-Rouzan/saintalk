@@ -26,9 +26,7 @@ class ResidentRepository implements ResidentRepositoryInterface
             'major' => $data['major'],
             'email' => $data['email'],
             'password' => bcrypt($data['password'])
-
         ]);
-
         $user->assignRole('resident');
 
         return $user->resident()->create($data);;
@@ -37,7 +35,6 @@ class ResidentRepository implements ResidentRepositoryInterface
     public function updateResident(array $data, int $id)
     {
         $resident = $this->getResidentById($id);
-
         $resident->user->update([
             'name' => $data['name'],
             'id_number' => $data['id_number'],
@@ -51,7 +48,6 @@ class ResidentRepository implements ResidentRepositoryInterface
     public function deleteResident(int $id)
     {
         $resident = $this->getResidentById($id);
-
         $resident->user()->delete();
 
         return $resident->delete();
