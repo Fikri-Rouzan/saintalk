@@ -17,7 +17,7 @@ SainTalk is a dedicated reporting platform for the academic community within the
 -   🎨 **Stylesheet Language:** CSS and SCSS.
 -   ⚙️ **Templating Engine:** Blade.
 -   🧩 **Frameworks:** Laravel and Bootstrap.
--   ⚛️ **Libraries:** Spatie, jQuery, SweetAlert2, and Leaflet.
+-   ⚛️ **Libraries:** Spatie, jQuery, SweetAlert2, Leaflet, and Lottie.
 -   🗄️ **Database:** MySQL.
 -   🗺️ **Map Service:** OpenStreetMap.
 -   💻 **Software:** Visual Studio Code and Laragon.
