@@ -13,8 +13,8 @@ SainTalk is a dedicated reporting platform for the academic community within the
 
 ## 🛠️ Technologies Used
 
--   🌐 **Programming Language:** PHP and JavaScript.
--   🎨 **Stylesheet Language:** CSS and SCSS.
+-   🌐 **Programming Languages:** PHP and JavaScript.
+-   🎨 **Stylesheet Languages:** CSS and SCSS.
 -   ⚙️ **Templating Engine:** Blade.
 -   🧩 **Frameworks:** Laravel and Bootstrap.
 -   ⚛️ **Libraries:** Spatie, jQuery, SweetAlert2, Leaflet, and Lottie.
